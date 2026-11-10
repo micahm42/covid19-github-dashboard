@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive exploration of COVID-19 cases, deaths, and rates across selected U.S. states.">
+  <meta name="theme-color" content="#101b2d">
+  <title>COVID-19 Across America | Data Center</title>
+  <link rel="preconnect" href="https://public.tableau.com">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/dashboard.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="COVID-19 Data Center home">
+        <span class="brand-mark" aria-hidden="true">+</span>
+        <span>COVID-19 <strong>DATA CENTER</strong></span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#visualizations">Visualizations</a>
+        <a href="#methodology">About the data</a>
+      </nav>
+      <span class="live-label"><span class="live-dot"></span> DATA EXPLORER</span>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">U.S. PUBLIC HEALTH • DATA STORY</p>
+          <h1>COVID-19<br><span>Across America.</span></h1>
+          <p class="hero-description">
+            Exploring reported cases, deaths, recent case counts, and population-adjusted rates
+            across the United States.
+          </p>
+          <a class="hero-link" href="#visualizations">Explore the visualizations <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-orbit" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit-core"><span>COVID</span><strong>19</strong></div>
+          <span class="orbit-point point-one"></span>
+          <span class="orbit-point point-two"></span>
+          <span class="orbit-point point-three"></span>
+        </div>
+        <div class="hero-footnote">A STATE-LEVEL DATA EXPLORATION</div>
+      </section>
+
+      <section class="section" id="overview">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / AT A GLANCE</p>
+            <h2>Explore the numbers</h2>
+          </div>
+          <p class="section-note">Summary figures are calculated from the six states used in the first comparison.</p>
+        </div>
+        <div class="metric-grid" id="metric-grid" aria-live="polite">
+          <article class="metric-card"><span class="metric-label">STATES COMPARED</span><strong>6</strong><span class="metric-foot">Selected for the lollipop chart</span></article>
+          <article class="metric-card"><span class="metric-label">TOTAL CASES</span><strong>—</strong><span class="metric-foot">Across the six selected states</span></article>
+          <article class="metric-card"><span class="metric-label">HIGHEST CASE COUNT</span><strong>—</strong><span class="metric-foot">State with the largest total</span></article>
+          <article class="metric-card"><span class="metric-label">SIX-STATE AVERAGE</span><strong>—</strong><span class="metric-foot">Average total cases per state</span></article>
+        </div>
+        <p class="data-caveat">These are values from the supplied workbook, not live or automatically updated COVID-19 statistics.</p>
+      </section>
+
+      <section class="section visualization-section" id="visualizations">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 / INTERACTIVE EXPLORATION</p>
+            <h2>Five ways to read the data</h2>
+          </div>
+          <p class="section-note">Each visualization will open as an interactive Tableau view when its published URL is added.</p>
+        </div>
+        <div class="chart-grid" id="chart-grid">
+          <!-- Cards are populated from assets/js/dashboard.js -->
+        </div>
+      </section>
+
+      <section class="insight-band">
+        <div class="insight-icon" aria-hidden="true">↗</div>
+        <div>
+          <p class="eyebrow">THE QUESTION BEHIND THE CHARTS</p>
+          <h2>What changes when we look beyond the total?</h2>
+          <p>
+            Total case counts show volume, but they do not account for population size.
+            Comparing recent cases, deaths, and rates per 100,000 adds context to the story.
+          </p>
+        </div>
+      </section>
+
+      <section class="section methodology" id="methodology">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / DATA NOTES</p>
+            <h2>About this project</h2>
+          </div>
+        </div>
+        <div class="method-grid">
+          <article class="method-card">
+            <span class="method-number">A</span>
+            <h3>Dataset</h3>
+            <p>Source file: <code>US_Covid.xlsx</code>. The workbook contains 50 state records and five fields.</p>
+          </article>
+          <article class="method-card">
+            <span class="method-number">B</span>
+            <h3>Measures</h3>
+            <p>Total cases, total deaths, cases in the last seven days, and rate per 100,000.</p>
+          </article>
+          <article class="method-card">
+            <span class="method-number">C</span>
+            <h3>Interpretation</h3>
+            <p>Totals and population-adjusted rates answer different questions. Avoid treating them as interchangeable.</p>
+          </article>
+          <article class="method-card">
+            <span class="method-number">D</span>
+            <h3>Time context</h3>
+            <p>The supplied workbook does not identify a reporting date or date range. Add that information when confirmed from the original source.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark">+</span><span>COVID-19 <strong>DATA CENTER</strong></span></a>
+      <p>Built with Tableau Public, HTML, CSS, JavaScript, and GitHub Pages.</p>
+      <a href="#top" class="back-top">Back to top ↑</a>
+    </footer>
+  </div>
+</body>
+</html>
